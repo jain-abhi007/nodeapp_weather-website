@@ -11,7 +11,8 @@ const forecast = (lat, lon, callback) => {
         }
         else{
             callback(error, {
-                data : body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + ' degress out. It feels like ' + body.current.feelslike + ' degress.'
+                data : body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + ' degress out. It feels like ' + body.current.feelslike + ' degress.' +
+                ' and Humidity =' + body.current.humidity + '%'
             })
         }
     })
